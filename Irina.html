@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Language Lessons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cdb0909cb4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>    
+            <div class="header-text">
+                <p> Russian Language Teacher </p>
+                <h1> Hi, I'm <span>Irina</span>, <br>Your Russian Teacher</h1>
+            </div>
+        </div>      
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/teacher.jpg" alt="Irina">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am a dedicated Russian language teacher with a passion for helping students master the language.
+                        With years of experience, I provide engaging lessons tailored to different learning styles.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('teaching')">Teaching Style</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('languages')"> Languages </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="teaching">
+                        <ul>
+                            <li><span>Interactive Learning</span><br> Fun and engaging lessons with real-world examples.</li>
+                            <li><span>Grammar & Speaking</span><br> Focus on pronunciation and sentence structure.</li>
+                            <li><span>Customized Approach</span><br> Lessons based to your level and goals.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2+ years</span><br> English teacher.</li>
+                            <li><span>Online & In-person</span><br> 5+ years of private teaching.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BSc in English and Teaching</span><br> Specializing teaching a new language.</li>
+                            <li><span>Certified Russian Tutor</span><br> Accredited teaching certifications.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                        <li><span>Russian</span><br>Native</li>
+                        <li><span>English</span><br>C1 level</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Pricing Section -->
+    <div id="pricing">
+        <div class="container">
+            <h1 class="subtitle">Pricing Options</h1>
+            <div class="pricing-list">
+                <div>
+                    <h2>One Hour Lesson</h2>
+                    <p>Price: €20 per hour</p>
+                </div>
+                <div>
+                    <h2>Monthly Subscription</h2>
+                    <p>Price: €70 (one lesson per week for a month)</p>
+                </div>
+                <div>
+                    <h2>10-Lesson Package</h2>
+                    <p>Price: €180 (valid for 10 lessons)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Weekly Schedule -->
+    <div id="schedule" class="container">
+        <h1 class="subtitle">Weekly Schedule</h1>
+        <div class="schedule-table">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr><td>3:00 PM - 4:00 PM</td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td></tr>
+                <tr><td>4:00 PM - 5:00 PM</td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td></tr>
+                <tr><td>5:00 PM - 6:00 PM</td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td><td class="available"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> teacher@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="your-access-key">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="response-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

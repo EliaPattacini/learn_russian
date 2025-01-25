@@ -1,0 +1,299 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{  
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background3.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#ff004f;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+.tab-contents ul {
+    list-style: none;
+    margin-top: 10px;
+}
+.tab-contents ul li {
+    margin-bottom: 10px;
+}
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+/* Pricing Section */
+.pricing-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.pricing-list div {
+    background: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.5s, transform 0.5s;
+}
+.pricing-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+
+/* Weekly Schedule */
+.schedule-table {
+    margin: 20px auto;
+    text-align: center;
+}
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.schedule-table th, .schedule-table td {
+    border: 1px solid #fff;
+    padding: 15px;
+    text-align: center;
+}
+.schedule-table th {
+    background-color: #ff004f;
+    color: white;
+}
+.schedule-table td {
+    background-color: #262626;
+    color: white;
+}
+.schedule-table td.available {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+.contact-left {
+    flex-basis: 35%;
+}
+.contact-left p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 22px;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 15px;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-right form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #262626;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+}
+form .btn2 {
+    padding: 14px 50px;
+    font-size: 18px;
+    background: #ff004f;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+}
+form .btn2:hover {
+    background: #e6003a;
+}
+
+/*------css for small screen-------*/
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/background3.png);
+        
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+    display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right:-200px;
+        width: 200px;
+        height:100vh;
+        padding-top: 50px;
+        z-index:2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+}
